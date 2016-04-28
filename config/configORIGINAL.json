@@ -1,6 +1,8 @@
 {
     "serverPath": "your_path/loop-server/",
     "agent": "AJ shortmail bot - https://atomjump.com",
+    "sentByShortmail": "AtomJump Shortmail",
+    "simplifyShortmailMsgs": "/(.*?)------ Sent from AtomJump Shortmail/is",
     "mailAccounts": [
         {
             "mail_id": 0,
@@ -18,7 +20,7 @@
             "pass": "12345",
             "aj": "aj_feedback_forum",
             "whisper": "Leave this blank for whole forum to read",
-            "freq": 5
+            "freq": "Number of minutes between auto-checking. Should be 5,60 or 1440"
         }   
     ]
 

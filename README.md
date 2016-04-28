@@ -37,9 +37,12 @@ Access for Less secure apps->turn on
 
 ## Using the email client
 
-Include an email address in the body of your message to email a new user. Otherwise, click on a user to email them and suggest
-they join you on the forum to chat further.
+Configure your popup settings with your email address.
 
-Note: if the tbl_layer.enm_access = 'public', the users will be invited to chat, but iff tbl_layer.enm_access = 'private', there will be a direct email sent. In future versions, we will enable an interface to this configuration. For now, please use SQL in MySQL. 
+After editing the config file, you can go into the AtomJump popup.
+Click on a user's name, write a message and click 'Send to [their name]'  to email them. You will also be BCC'ed into any outgoing emails, so that you have a record of this outgoing message in your ordinary inbox.
 
-We also want to CC your inbox for any outgoing emails, so that you have a record of all outgoings in your ordinary mailbox. This is yet to be completed. 
+To email a new user: include an email address in the body of your message. 
+
+Your popup will be auto-updated with new incoming email messages every five minutes.
+

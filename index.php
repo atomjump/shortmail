@@ -84,12 +84,6 @@
 	
     $api = new cls_plugin_api();
 
-    /*
-	$bg = new clsBasicGeosearch();
-	$ly = new cls_layer();
-	$sh = new cls_ssshout();
-	*/
-	
 	if($argc >= 1) {
 		$freq = intval($argv[1]);
 	} else {
@@ -100,6 +94,7 @@
 	
 	//Read the email feed file
     $feeds = $shortmail_config['mailAccounts'];
+
 	
 	$silent = false;
 	if(isset($_REQUEST['refresh'])) {
@@ -243,12 +238,12 @@
 						$utf8_text = preg_replace('/On \d(.*?)\d\d\d\d[\,]? at(.*)/is', '', $utf8_text);		//The s allows for newlines in the match so it goes to the end of the string
 			
 						if($utf8_text != "") {
-							if(strstr($utf8_text, "AtomJump Shortmail") == false) {
-						
+							if(strstr($utf8_text, $shortmail_config['sentByShortmail']) == false) {
+						        //If not an AtomJump Shotmail message, append the subject to the body
 								$utf8_text = $subject . " - " . $utf8_text;
 							} else {
 								//Simplify the message from other shortmail users
-								$utf8_text = preg_replace('/(.*?)------ Sent from AtomJump Shortmail/is', '$1', $utf8_text);
+								$utf8_text = preg_replace($shortmail_config['simplifyShortmailMsgs'] , '$1', $utf8_text);
 							
 							}
 						} else {
@@ -315,7 +310,11 @@
 				 		    //Get the forum id
 						 	$forum_info = $api->get_forum_id($forum_name);
 						 	 
-						   
+						    
+						    //Ensure we are using a private forum, so that we can send emails out from it
+						    $api->db_update("tbl_layer", "enm_access = 'private' WHERE int_layer_id = " . $forum_info['forum_id']);
+						    
+						    
                             //Send the message
 							$api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], false);
 						}
