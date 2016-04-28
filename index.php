@@ -9,7 +9,7 @@
 	
 	if(!isset($shortmail_config)) {
         //Get global plugin config - but only once
-		$data = file_get_contents (dirname(__FILE__) . "/config.json");
+		$data = file_get_contents (dirname(__FILE__) . "/config/config.json");
         if($data) {
             $shortmail_config = json_decode($data, true);
             if(!isset($shortmail_config)) {
@@ -76,16 +76,19 @@
 	
 	$notify = false;
 	require_once('vendor/getemail/getEmail.class.php');
-	include_once('config/db_connect.php');	
+	include_once($start_path . 'config/db_connect.php');	
 	
 	require($start_path . "classes/cls.pluginapi.php");
 	
-    $api = new cls_api();
+	
+	
+    $api = new cls_plugin_api();
 
+    /*
 	$bg = new clsBasicGeosearch();
 	$ly = new cls_layer();
 	$sh = new cls_ssshout();
-	
+	*/
 	
 	if($argc >= 1) {
 		$freq = intval($argv[1]);
@@ -159,6 +162,7 @@
 			/**
 			 * Your login details go here
 			 */
+			
 			$email->login =  $feed['user'];
 			$email->password =  $feed['pass'];
 			$email->optimise = true;			//Only get last day's worth

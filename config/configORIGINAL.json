@@ -1,8 +1,10 @@
 {
+    "serverPath": "your_path/loop-server/",
+    "agent": "AJ shortmail bot - https://atomjump.com",
     "mailAccounts": [
         {
             "mail_id": 0,
-            "feed": "{imap.yourmailserver.com:993/imap/ssl/novalidate-cert}"
+            "feed": "{imap.yourmailserver.com:993/imap/ssl/novalidate-cert}",
             "user": "test@test.com",
             "pass": "12345",
             "aj": "aj_feedback_forum_name",
@@ -10,7 +12,7 @@
         },
         {
             "mail_id": 1,
-            "feed": "{imap.gmail.com:993/imap/ssl/novalidate-cert}"
+            "feed": "{imap.gmail.com:993/imap/ssl/novalidate-cert}",
             "user": "test@gmail.com",
             "pass": "12345",
             "aj": "aj_feedback_forum",
