@@ -1,0 +1,22 @@
+{
+    "mailAccounts": [
+        {
+            "mail_id": 0,
+            "feed": "{imap.yourmailserver.com:993/imap/ssl/novalidate-cert}"
+            "user": "test@test.com",
+            "pass": "12345",
+            "aj": "aj_feedback_forum_name",
+            "whisper": "92.27.10.17:123,92.27.10.17:125"
+        },
+        {
+            "mail_id": 1,
+            "feed": "{imap.gmail.com:993/imap/ssl/novalidate-cert}"
+            "user": "test@gmail.com",
+            "pass": "12345",
+            "aj": "aj_feedback_forum",
+            "whisper": "Leave this blank for whole forum to read"
+        }   
+    ]
+
+
+}
