@@ -81,10 +81,6 @@
 	$define_classes_path = $start_path;     //This flag ensures we have access to the typical classes, before the cls.pluginapi.php is included
 	require($start_path . "classes/cls.pluginapi.php");
 	
-	/*require($start_path . "classes/cls.basic_geosearch.php");
-    require($start_path . "classes/cls.layer.php");
-    require($start_path . "classes/cls.ssshout.php");
-	*/
 	
     $api = new cls_plugin_api();
 
