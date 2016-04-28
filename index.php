@@ -281,9 +281,10 @@
 													NOW(), 
 													'" . $feed['whisper'] . "') ");
 						
+                        echo "root_server_url:" . $root_server_url;
 
-
-						$link = $root_server_url . "/seemail.php?id=" . mysql_insert_id() . "&code=234789fhweififu3289sdgwe4t";
+						$link = $root_server_url . "/plugins/shortmail/seemail.php?id=" . mysql_insert_id() . "&code=234789fhweififu3289sdgwe4t";
+						echo "Link:" . $link;
 						
 						
 						$summary_description = summary(strip_tags($description),140);

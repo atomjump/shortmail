@@ -39,7 +39,8 @@ Access for Less secure apps->turn on
 
 Configure your popup settings with your email address.
 
-After editing the config file, you can go into the AtomJump popup.
+After editing the config file, you can go into the AtomJump popup.  To read the full expanded email, you must be an owner of the forum: Click settings->Advanced->This forum's private owners, and copy and paste your myMachineUser value e.g. "192.100.101.53:420".
+
 Click on a user's name, write a message and click 'Send to [their name]'  to email them. You will also be BCC'ed into any outgoing emails, so that you have a record of this outgoing message in your ordinary inbox.
 
 To email a new user: include an email address in the body of your message. 
