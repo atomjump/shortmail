@@ -1,10 +1,14 @@
 <img src="https://atomjump.com/images/logo80.png">
 
 # shortmail
-A fast email client plugin for the AtomJump Loop Server. Email as quickly as you chat. 
+A fast email client plugin for the AtomJump Loop Server. Email as quickly as you chat.
+
+ 
 
 
 ## Installation
+
+Find the server at https://github.com/atomjump/loop-server. Download and install.
 
 Download the .zip file or git clone the repository into the directory loop-server/plugins/shortmail
 
