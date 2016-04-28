@@ -1,3 +1,5 @@
+<img src="https://atomjump.com/images/logo80.png">
+
 # shortmail
 A fast email client plugin for the AtomJump Loop Server. Email as quickly as you chat. 
 
