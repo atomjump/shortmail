@@ -4,6 +4,9 @@
 A fast email client plugin for the AtomJump Loop Server. Email as quickly as you chat.
 
  
+## Requirements
+
+AtomJump Loop Server >= 0.5.0
 
 
 ## Installation
