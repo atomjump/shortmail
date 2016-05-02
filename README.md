@@ -27,9 +27,9 @@ sudo service apache2 restart
 Put into your crontab file:
 
 sudo crontab -e
-	*/5 * * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 5
-    0 * * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 60
-	0 0 * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 1440
+	*/5 * * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 5  
+    0 * * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 60  
+	0 0 * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 1440  
 
 
 Copy config/configORIGINAL.json to config/config.json
