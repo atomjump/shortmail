@@ -40,7 +40,7 @@ Note: the group file
 
 ## Configuring GMAIL accounts
 
-Go into Settings->Forwarding and POP/IMAP->Enable IMAP
+Go into Settings->Forwarding and POP/IMAP->Enable IMAP  
 Access for Less secure apps->turn on
 
 ## Using the email client
