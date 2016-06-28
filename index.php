@@ -102,20 +102,32 @@
 		//This is a request from the client, not the server for a particular feed to be refreshed
 		$freq = 10000;		//always refresh
 		
-		//Now limit the array of accounts to the one that points at.  Note - ideally this would be an indexed database check once we have outgrown our array structure.
-		$newfeeds = array();
-		foreach($feeds as $feed) {
-			$forums = explode(",",$feed['aj']);
-			foreach($forums as $forum) {
+		if(isset($_REQUEST['u'])) {
+			//a custom user
+			$feeds = array(array("feed" => $_REQUEST['fe'],
+			               "user" => $_REQUEST['u'],
+			               "pass" => $_REQUEST['p'],
+			               "aj" => $_REQUEST['refresh'],
+			               "whisper" => $_REQUEST['w'],
+			               "freq" => $_REQUEST['fr']));
 			
-				if($forum == $_REQUEST['refresh']) {
-					$newfeeds = array($feed);
+		} else {
+		
+			//Now limit the array of accounts to the one that points at.  Note - ideally this would be an indexed database check once we have outgrown our array structure.
+			$newfeeds = array();
+			foreach($feeds as $feed) {
+				$forums = explode(",",$feed['aj']);
+				foreach($forums as $forum) {
+			
+					if($forum == $_REQUEST['refresh']) {
+						$newfeeds = array($feed);
+					}
 				}
+		
 			}
 		
+			$feeds = $newfeeds;
 		}
-		
-		$feeds = $newfeeds;
 	
 	}
 	
