@@ -93,7 +93,7 @@
 
 	
 	//Read the email feed file
-    $feeds = $shortmail_config['mailAccounts'];
+    	$feeds = $shortmail_config['mailAccounts'];
 
 	
 	$silent = false;
@@ -211,10 +211,10 @@
 	
 			foreach ($feed_array_out as $message) {
 			 
-			  	$guid = (string) $message->messageId;
+			    	$guid = (string) $message->messageId;
 			  	$pubDate = (string) $message->date;
 		  
-			    if($guid != "") {
+			    	if($guid != "") {
 			  
 			  	  
 			  		
@@ -296,11 +296,15 @@
 													NOW(), 
 													'" . $feed['whisper'] . "') ");
 						
-                        echo "root_server_url:" . $root_server_url;
+						if($silent == false) {
+                        				echo "root_server_url:" . $root_server_url;
+						}
 
 						$link = $root_server_url . "/plugins/shortmail/seemail.php?id=" . mysql_insert_id() . "&code=234789fhweififu3289sdgwe4t";
-						echo "Link:" . $link;
 						
+						if($silent == false) {
+							echo "Link:" . $link;
+						}
 						
 						$summary_description = summary(strip_tags($description),140);
 						if($summary_description != "") {
@@ -323,15 +327,15 @@
 						$forum_array = explode(",", $feed['aj']);
 				  
 				 		foreach($forum_array as $forum_name) {
-				 		    //Get the forum id
+				 		    	//Get the forum id
 						 	$forum_info = $api->get_forum_id($forum_name);
 						 	 
 						    
-						    //Ensure we are using a private forum, so that we can send emails out from it
-						    $api->db_update("tbl_layer", "enm_access = 'private' WHERE int_layer_id = " . $forum_info['forum_id']);
+						    	//Ensure we are using a private forum, so that we can send emails out from it
+						    	$api->db_update("tbl_layer", "enm_access = 'private' WHERE int_layer_id = " . $forum_info['forum_id']);
 						    
 						    
-                            //Send the message
+                            				//Send the message
 							$api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], false);
 						}
 				
