@@ -104,12 +104,12 @@
 		
 		if(isset($_REQUEST['u'])) {
 			//a custom user
-			$feeds = array(array("feed" => $_REQUEST['fe'],
+			$feeds = array("feed" => $_REQUEST['fe'],
 			               "user" => $_REQUEST['u'],
 			               "pass" => $_REQUEST['p'],
 			               "aj" => $_REQUEST['refresh'],
 			               "whisper" => $_REQUEST['w'],
-			               "freq" => $_REQUEST['fr']));
+			               "freq" => $_REQUEST['fr']);
 			
 		} else {
 		
