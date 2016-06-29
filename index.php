@@ -109,7 +109,8 @@
 			               "pass" => (string)$_REQUEST['p'],
 			               "aj" => (string)$_REQUEST['refresh'],
 			               "whisper" => (string)$_REQUEST['w'],
-			               "freq" => $_REQUEST['fr']);
+			               "freq" => $_REQUEST['fr'],
+			               "mail_id" => $_REQUEST['mail_id']);
 			
 		} else {
 		
