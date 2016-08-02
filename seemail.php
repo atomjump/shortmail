@@ -37,7 +37,7 @@
 	//Read the email
 	$sql = "SELECT * FROM tbl_email WHERE int_email_id = " . clean_data($_REQUEST['id']);
 	$result = $api->db_select($sql);
-	if($row = mysql_fetch_array($result))
+	if($row = $api->db_fetch_array($result))
 	{
 	
 		//Check we have permissions on this layer
@@ -53,7 +53,7 @@
 			
 				$sql = "SELECT * FROM tbl_layer_subscription WHERE int_layer_id = " . clean_data($forum_info['forum_id']) . " AND int_user_id = " . $_SESSION['logged-user'] . " AND enm_active = 'active'";
 				$resultb = $api->db_select($sql);
-				if($rowb = mysql_fetch_array($resultb))	
+				if($rowb = $api->db_fetch_array($resultb))	
 				{
 					$authenticated = true;
 			
