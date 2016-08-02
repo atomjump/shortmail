@@ -155,7 +155,7 @@
 			$last_msg_id = null;
 			$sql = "SELECT MAX(int_uid_id) as lastmsg from tbl_feed WHERE int_mail_id = " . $mail_id;
 			$result = $api->db_select($sql);
-			if($row = mysql_fetch_array($result))
+			if($row = $api->db_fetch_array($result))
 			{
 				$last_msg_id = $row['lastmsg'];
 				 if($silent == false) {
@@ -223,7 +223,7 @@
 				  //Check if this item has already been processed for this mailbox
 				  $sql = "SELECT * FROM tbl_feed WHERE int_uid_id = '" . trim($guid) . "' AND int_mail_id = " . $mail_id;
 				  $result = $api->db_select($sql);
-					if($row = mysql_fetch_array($result))
+					if($row = $api->db_fetch_array($result))
 					{
 			
 						//Already exists - fast skip
@@ -292,7 +292,7 @@
 						                            "(
 													'" . clean_data($feed['aj']) . "',
 													'". clean_data($subject) . "',
-													'" . mysql_real_escape_string($raw_text) .  "', 
+													'" . $api->db_real_escape_string($raw_text) .  "', 
 													NOW(), 
 													'" . $feed['whisper'] . "') ");
 						
@@ -300,7 +300,7 @@
                         				echo "root_server_url:" . $root_server_url;
 						}
 
-						$link = $root_server_url . "/plugins/shortmail/seemail.php?id=" . mysql_insert_id() . "&code=234789fhweififu3289sdgwe4t";
+						$link = $root_server_url . "/plugins/shortmail/seemail.php?id=" . $api->db_insert_id() . "&code=234789fhweififu3289sdgwe4t";
 						
 						if($silent == false) {
 							echo "Link:" . $link;
