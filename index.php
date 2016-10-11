@@ -336,7 +336,7 @@
 						    
 						    
                             //Send the message
-                            $options['always_send_email'] = true;		//This ensures we will always send an email even if there have been some recent mails on the forum
+                            $options = array('always_send_email' => true);		//This ensures we will always send an email even if there have been some recent mails on the forum
 							$api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], $options);
 						}
 				
