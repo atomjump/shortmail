@@ -57,7 +57,7 @@
 				{
 					$authenticated = true;
 			
-					//TODO - check whisper_to_ status also
+					
 				}		
 			}
 		}
@@ -72,9 +72,9 @@
 			 	<meta name="viewport" content="width=device-width, user-scalable=no">
 			 	<title>AtomJump Shortmail - <?php echo $row['var_title'] ?></title>
 			 
-				 <meta name="description" content="Offer your customers a smart feedback form, with live chat, public & private posts across any mobile or desktop device.">
-				 
-				 <meta name="keywords" content="Feedback Form, Live Chat, Customer Chat">
+			    <meta name="description" content="Open source instant messaging client/server for any mobile or desktop device.">
+					 
+				<meta name="keywords" content="Instant Messaging, Live Chat, Customer Chat, Open Source Messaging, Open Messaging">
 			
 			</head>
 			<body>
@@ -88,6 +88,10 @@
 			
 		
 				<?php
+		} else {
+			echo "Sorry, you are not authorised to view this. Please log in as the correct user.";
+		
+		
 		}
 	
 	}

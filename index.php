@@ -331,12 +331,13 @@
 						 	$forum_info = $api->get_forum_id($forum_name);
 						 	 
 						    
-						    	//Ensure we are using a private forum, so that we can send emails out from it
-						    	$api->db_update("tbl_layer", "enm_access = 'private' WHERE int_layer_id = " . $forum_info['forum_id']);
+						    //Ensure we are using a private forum, so that we can send emails out from it
+						    $api->db_update("tbl_layer", "enm_access = 'private' WHERE int_layer_id = " . $forum_info['forum_id']);
 						    
 						    
-                            				//Send the message
-							$api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], false);
+                            //Send the message
+                            $options['always_send_email'] = true;		//This ensures we will always send an email even if there have been some recent mails on the forum
+							$api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], $options);
 						}
 				
 						//Now keep a record of this feed item for easy non duplication
