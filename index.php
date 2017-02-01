@@ -136,6 +136,7 @@
 	
 	if($silent == false) {
 		echo "Frequency: $freq\n";
+		print_r($feeds);
 	}
 	
 	foreach($feeds as $feed) {
