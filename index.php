@@ -98,7 +98,7 @@
 	
 	$silent = false;
 	if(isset($_REQUEST['refresh'])) {
-		$silent = true;
+		$silent = false;  //TESTING - usually true
 		//This is a request from the client, not the server for a particular feed to be refreshed
 		$freq = 10000;		//always refresh
 		
