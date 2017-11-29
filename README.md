@@ -51,7 +51,7 @@ After editing the config file, you can go into the AtomJump popup.  To read the 
 
 Click on a user's name, write a message and click 'Send to [their name]'  to email them. You will also be BCC'ed into any outgoing emails, so that you have a record of this outgoing message in your ordinary inbox.
 
-To email a new user: include an email address in the body of your message. 
+To email a new user: include an email address in the body of your message. For AtomJump Loop Server >= 1.6.2, you need the word 'email:' before it. 
 
 Your popup will be auto-updated with new incoming email messages every five minutes.
 
