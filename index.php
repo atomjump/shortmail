@@ -7,6 +7,16 @@
 	//		0 0 * * *	/usr/bin/php /your_server_path/plugins/shortmail/index.php 1440
 	
 	
+	function trim_trailing_slash_local($str) {
+        return rtrim($str, "/");
+    }
+    
+    function add_trailing_slash_local($str) {
+        //Remove and then add
+        return rtrim($str, "/") . '/';
+    }
+	
+	
 	if(!isset($shortmail_config)) {
         //Get global plugin config - but only once
 		$data = file_get_contents (dirname(__FILE__) . "/config/config.json");
@@ -70,7 +80,7 @@
 	$agent = $shortmail_config['agent'];
 	ini_set("user_agent",$agent);
 	$_SERVER['HTTP_USER_AGENT'] = $agent;
-	$start_path = $shortmail_config['serverPath'];
+	$start_path = add_trailing_slash_local($shortmail_config['serverPath']);
 	
 
 	
