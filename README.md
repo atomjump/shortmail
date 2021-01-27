@@ -11,7 +11,7 @@ AtomJump Loop Server >= 1.0.4
 
 ## Installation
 
-Find the server at https://github.com/atomjump/loop-server. Download and install.
+Find the server at https://src.atomjump.com/atomjump/loop-server. Download and install.
 
 Download the .zip file or git clone the repository into the directory loop-server/plugins/shortmail
 
