@@ -1,19 +1,19 @@
 <img src="https://atomjump.com/images/logo80.png">
 
 # shortmail
-A fast email client plugin for the AtomJump Loop Server. Email as quickly as you chat.
+A fast email client plugin for the AtomJump Messaging Server. Email as quickly as you chat.
 
  
 ## Requirements
 
-AtomJump Loop Server >= 1.0.4
+AtomJump Messaging Server >= 1.0.4
 
 
 ## Installation
 
 Find the server at https://src.atomjump.com/atomjump/loop-server. Download and install.
 
-Download the .zip file or git clone the repository into the directory loop-server/plugins/shortmail
+Download the .zip file or git clone the repository into the directory messaging-server/plugins/shortmail
 
 You must have the PHP extension php_imap enabled.
 
@@ -51,7 +51,7 @@ After editing the config file, you can go into the AtomJump popup.  To read the 
 
 Click on a user's name, write a message and click 'Send to [their name]'  to email them. You will also be BCC'ed into any outgoing emails, so that you have a record of this outgoing message in your ordinary inbox.
 
-To email a new user: include an email address in the body of your message. For AtomJump Loop Server >= 1.6.2, you need the word 'email:' before it. 
+To email a new user: include an email address in the body of your message. For AtomJump Messaging Server >= 1.6.2, you need the word 'email:' before it. 
 
 Your popup will be auto-updated with new incoming email messages every five minutes.
 
