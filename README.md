@@ -1,5 +1,7 @@
 <img src="https://atomjump.com/images/logo80.png">
 
+__WARNING: this project has now moved to https://src.atomjump.com/atomjump/shortmail.git__
+
 # shortmail
 A fast email client plugin for the AtomJump Messaging Server. Email as quickly as you chat.
 
